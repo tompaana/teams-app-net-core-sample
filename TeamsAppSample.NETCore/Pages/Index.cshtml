@@ -5,3 +5,32 @@
 }
 
 <h1>Teams App Sample - .NET Core</h1>
+
+<p>
+The short-lived purpose of this sample is to serve as a quick guide on how to implement a Teams app using Bot Framework v4
+- which as of writing this is still in preview - instead of the current v3.x.
+Visit <a href="https://github.com/tompaana/teams-app-net-core-sample">https://github.com/tompaana/teams-app-net-core-sample</a> to learn more.
+</p>
+
+<h2>Bot</h2>
+
+<p>The bot endpoint URL is: <a id="botEndpointUrl" /></p>
+
+<script>
+    var botEndpointUrlLink = document.getElementById("botEndpointUrl");
+    botEndpointUrlLink.setAttribute('href', location.protocol + "//" + location.host + "@Model.BotEndpointPath");
+    botEndpointUrlLink.innerHTML = location.protocol + "//" + location.host + "@Model.BotEndpointPath";
+</script>
+
+<p>The bot credentials are:</p>
+<ul>
+    <li id="botAppId" />
+    <li id="botAppPassword" />
+</ul>
+
+<script>
+    var botAppIdItem = document.getElementById("botAppId");
+    botAppIdItem.innerHTML = "App ID: @Model.BotAppId";
+    var botAppPasswordItem = document.getElementById("botAppPassword");
+    botAppPasswordItem.innerHTML = "App password: @Model.BotAppPassword";
+</script>
