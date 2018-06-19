@@ -72,7 +72,27 @@ you created previously. Select **Channels** under **BOT MANAGEMENT** and click t
 
 ![Configuring Microsoft Teams channel in Azure portal](/doc/configure-microsoft-teams-channel.png?size=50)
 
+Then package and upload the app manifest in Teams. Remember when I said (wrote) that a Teams app is
+nothing but a web app? Still true. That also means that your app doesn't live inside Teams, but
+rather extends its tentacles (endpoints) into the abyss of the Teams registry. For exact details see
+[this article](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/apps/apps-upload),
+**but** here's the quick guide:
 
+1. Open the [`manifest.json`](/TeamsAppSample.NETCore/TeamsManifest/manifest.json) in text editor
+   and update the base of the URLs to match the URL of your published bot **and** add your bot ID
+   (`MicrosoftAppId`) as the value of `botId` within `bots` array
+   * Top tip: Use [App Studio for Microsoft Teams](https://docs.microsoft.com/en-us/microsoftteams/platform/get-started/get-started-app-studio)
+     to create and manage manifest files (and to see what properties there are)
+2. Package the content in the [`TeamsManifest`](/TeamsAppSample.NETCore/TeamsManifest/) folder in a
+   `.zip` file so that all the files are in the root of the package (the name of the package is
+   insignificant in the grand scheme of things)
+3. In Teams, click the three dots next to the channel name where you want to install the app:
+    ![Channel settings](/doc/channel-settings.png?size=50)
+4. Navigate to **Apps** tab and locate the **Upload a custom app** link in the bottom-right corner
+   and click it, CLICK IT!
+5. Browse to the location of your `.zip` package containing the manifest and the icons and select **Open**
+   * If there were no errors, you should now see your app in the list - looks something like this:
+        ![Entry in apps list](/doc/entry-in-apps-list.png?size=50)
 
 
 (WORK IN PROGRESS THIS IS! TEXT BELOW MIND YOU NOT.)

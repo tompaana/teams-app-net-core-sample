@@ -45,7 +45,7 @@
   ],
   "bots": [
     {
-      "botId": "1ac75537-e838-44d9-82e4-6445c49fb81a",
+      "botId": "",
       "scopes": [
         "personal",
         "team"
