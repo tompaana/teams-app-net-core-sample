@@ -8,7 +8,7 @@ utilize tabs (web content in `iframe`), connectors to allow rich notifications a
 [more](https://developer.microsoft.com/en-us/microsoft-teams/scenarios). But that doesn't change the
 fact that a Teams app is simply a web app.
 
-![Author's highly technical illustration of a web app.](/doc/webapp.png?s=100)<br />
+![Author's highly technical illustration of a web app.](/doc/webapp.png?s=50)<br />
 *Author's highly technical illustration of a web app.*
 
 The short-lived purpose of this sample is to serve as a quick guide on how to implement a Teams app
