@@ -1,0 +1,89 @@
+﻿@page
+@using  TeamsAppSample.NETCore.Pages.Auth
+@model IndexModel
+@{
+    ViewData["Title"] = "Authenticate";
+}
+
+<script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha384-VC7EHu0lDzZyFfmjTPJq+DFyIn8TUGAJbEtpXquazFVr00Q/OOx//RjiZ9yU9+9m" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@@microsoft/teams-js@1.2.5/dist/MicrosoftTeams.min.js" integrity="sha384-fTjWNTelhUDsOG+6Xvsly5BVO8estmdrfVmaRQuTGRTtcjHYA3oQANo805/kHXvJ" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+    microsoftTeams.initialize();
+    microsoftTeams.settings.setValidityState(true);
+
+    // Login to Azure AD and get access to Microsoft Graph
+    function login() {
+        hideProfileAndError();
+
+        microsoftTeams.authentication.authenticate({
+            url: window.location.origin + "/Auth/InitiateAuthFlow",
+            width: 600,
+            height: 535,
+            successCallback: function (result) {
+                console.log("Login succeeded: " + result);
+                getUserProfile(result.accessToken);
+            },
+            failureCallback: function (reason) {
+                console.log("Login failed: " + reason);
+                handleAuthError(reason);
+            }
+        });
+    }
+
+    // Get the user's profile information from Microsoft Graph
+    function getUserProfile(accessToken) {
+        $.ajax({
+            url: "https://graph.microsoft.com/v1.0/me/",
+            beforeSend: function (request) {
+                request.setRequestHeader("Authorization", "Bearer " + accessToken);
+            },
+            success: function (profile) {
+                $("#profileDisplayName").text(profile.displayName);
+                $("#profileJobTitle").text(profile.jobTitle);
+                $("#profileMail").text(profile.mail);
+                $("#profileUpn").text(profile.userPrincipalName);
+                $("#profileObjectId").text(profile.id);
+                $("#divProfile").css({ display: "" });
+                $("#divError").css({ display: "none" });
+            },
+            error: function (xhr, textStatus, errorThrown) {
+                console.log("textStatus: " + textStatus + ", errorThrown:" + errorThrown);
+                $("#divError").text(errorThrown).css({ display: "" });
+                $("#divProfile").css({ display: "none" });
+            },
+        });
+    }
+
+    // Show error information
+    function handleAuthError(reason) {
+        $("#divError").text(reason).css({ display: "" });
+        $("#divProfile").css({ display: "none" });
+    }
+
+    // Clear all information in tab
+    function hideProfileAndError() {
+        $("#divError").text("").css({ display: "none" });
+        $("#divProfile").css({ display: "none" });
+    }
+</script>
+
+<p>
+    Click on the "Login" button below to login to Azure AD, and grant the sample app access to your profile information.
+    The app will fetch your profile using Microsoft Graph, and display information about you below.
+</p>
+
+<!-- Login button -->
+<button onclick="login()">Login to Azure AD</button>
+
+<!-- Result -->
+<p>
+    <div id="divError" style="display: none"></div>
+    <div id="divProfile" style="display: none">
+        <div><b>Name:</b> <span id="profileDisplayName" /></div>
+        <div><b>Job title:</b> <span id="profileJobTitle" /></div>
+        <div><b>E-mail:</b> <span id="profileMail" /></div>
+        <div><b>UPN:</b> <span id="profileUpn" /></div>
+        <div><b>Object id:</b> <span id="profileObjectId" /></div>
+    </div>
+</p>

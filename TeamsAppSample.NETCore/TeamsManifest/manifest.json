@@ -1,0 +1,62 @@
+{
+  "$schema": "https://statics.teams.microsoft.com/sdk/v1.2/manifest/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.2",
+  "version": "0.0.1",
+  "id": "1ac75537-e838-44d9-82e4-6445c49fb81a",
+  "packageName": "com.underscore.teams.sample.app",
+  "developer": {
+    "name": "Tomi",
+    "websiteUrl": "https://www.github.com/tompaana/teams-app-net-core-sample",
+    "privacyUrl": "https://www.github.com/tompaana/teams-app-net-core-sample/README.md",
+    "termsOfUseUrl": "https://www.github.com/tompaana/teams-app-net-core-sample/LICENSE"
+  },
+  "icons": {
+    "color": "color.png",
+    "outline": "outline.png"
+  },
+  "name": {
+    "short": "Teams App Sample",
+    "full": ".NET Core Teams App Sample"
+  },
+  "description": {
+    "short": ".NET Core Teams App Sample",
+    "full": "A sample app for developers demonstrating how to implement a .NET Core based Teams app utilizing Bot Framework v4 preview."
+  },
+  "accentColor": "#00FF00",
+  "configurableTabs": [
+  ],
+  "staticTabs": [
+    {
+      "entityId": "index",
+      "name": "Index",
+      "contentUrl": "https://teamsappsamplenetcore.azurewebsites.net/",
+      "scopes": [
+        "personal"
+      ]
+    },
+    {
+      "entityId": "auth",
+      "name": "Authentication",
+      "contentUrl": "https://teamsappsamplenetcore.azurewebsites.net/Auth",
+      "scopes": [
+        "personal"
+      ]
+    }
+  ],
+  "bots": [
+    {
+      "botId": "1ac75537-e838-44d9-82e4-6445c49fb81a",
+      "scopes": [
+        "personal",
+        "team"
+      ]
+    }
+  ],
+  "permissions": [
+    "identity",
+    "messageTeamMembers"
+  ],
+  "validDomains": [
+    "*.azurewebsites.net"
+  ]
+}
