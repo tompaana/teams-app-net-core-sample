@@ -47,8 +47,9 @@ Here goes:
 1. Open the solution (`TeamsAppSample.NETCore.sln`) in Visual Studio/your IDE
 2. Follow the steps in this article carefully:
    [Deploy your bot to Azure](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-howto-deploy-azure?view=azure-bot-service-4.0)
-   * Top tip: Create a new [Azure resource group] for the app so that if stuff goes wrong, it's
-     really easy to just delete the whole group and start over
+   * Top tip: Create a new [Azure resource group](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview#resource-groups)
+     for the app so that if stuff goes wrong, it's really easy to just delete the whole group and
+     start over
 
 
 (WORK IN PROGRESS THIS IS! TEXT BELOW MIND YOU NOT.)
