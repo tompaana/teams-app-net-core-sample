@@ -8,7 +8,8 @@ utilize tabs (web content in `iframe`), connectors to allow rich notifications a
 [more](https://developer.microsoft.com/en-us/microsoft-teams/scenarios). But that doesn't change the
 fact that a Teams app is simply a web app.
 
-![Author's highly technical illustration of a web app.](/doc/webapp.png)
+![Author's highly technical illustration of a web app.](/doc/webapp.png){:height="75%" width="75%"}<br />
+*Author's highly technical illustration of a web app.*
 
 The short-lived purpose of this sample is to serve as a quick guide on how to implement a Teams app
 using [Bot Framework v4](https://github.com/Microsoft/botbuilder-dotnet) - which as of writing this
