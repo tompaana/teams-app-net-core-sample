@@ -86,11 +86,13 @@ rather extends its tentacles (endpoints) into the abyss of the Teams registry. F
 2. Package the content in the [`TeamsManifest`](/TeamsAppSample.NETCore/TeamsManifest/) folder in a
    `.zip` file so that all the files are in the root of the package (the name of the package is
    insignificant in the grand scheme of things)
-3. In Teams, click the three dots next to the channel name where you want to install the app:
+3. In Teams, click the three dots next to the channel, where you want to install the app, and select
+   **Manage team**:
     ![Channel settings](/doc/channel-settings.png?size=50)
-4. Navigate to **Apps** tab and locate the **Upload a custom app** link in the bottom-right corner
-   and click it, CLICK IT!
-5. Browse to the location of your `.zip` package containing the manifest and the icons and select **Open**
+4. Navigate to the **Apps** tab and locate the **Upload a custom app** link in the bottom-right
+   corner and click it, CLICK IT!
+5. Browse to the location of your `.zip` package containing the manifest file and the icons and
+   select **Open**
    * If there were no errors, you should now see your app in the list - looks something like this:
         ![Entry in apps list](/doc/entry-in-apps-list.png?size=50)
 
