@@ -58,7 +58,7 @@ Finally add the credentials (`MicrosoftAppId` and `MicrosoftAppPassword`) to the
 [`appsettings.json` file](/TeamsAppSample.NETCore/appsettings.json) and republish the bot - now all
 you need to do to republish is to right-click the app project in the **Solution Explorer** in
 Visual Studio, select **Publish...** and click the **Pubish** button on the tab (named in the sample
-"TeamsAppSample..NETCore").
+"TeamsAppSample.NETCore").
 
 Well, that was quick and easy (I hope). Next, why not download the
 [Bot Framework Emulator](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-debug-emulator?view=azure-bot-service-3.0)

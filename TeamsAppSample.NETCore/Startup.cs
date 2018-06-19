@@ -83,6 +83,8 @@ namespace TeamsAppSample.NETCore
                 .UseMvc() // Required by Razor pages
                 .UseBotFramework(bot =>
                 {
+                    // This is how you can define a custom endpoint in case you're unhappy with
+                    // the default "/api/messages":
                     bot.BasePath = Configuration["BotBasePath"];
                     bot.MessagesPath = Configuration["BotMessagesPath"];
                 });
