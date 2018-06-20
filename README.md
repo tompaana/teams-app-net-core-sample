@@ -162,6 +162,8 @@ To test the authentication flow do the following:
 2. Copy the application ID of the app you just registered into the
    [`manifest.json`](/TeamsAppSample.NETCore/TeamsManifest/manifest.json) file as the value of the
    `AuthClientId` property
+    * The [`InitiateAuthFlow.cshtml`](/TeamsAppSample.NETCore/Pages/Auth/InitiateAuthFlow.cshtml)
+      page then picks it up into the query parameters of the auth endpoint call
 3. Republish the app
 4. Try it out!
 
