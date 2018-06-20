@@ -178,7 +178,7 @@ Given that you didn't mess with the actual code, there's one thing remember:
     * Make sure this is set in the settings of the **Bot Channels Registration** resource in the
       **Azure Portal** and that it ends with the appropriate path (`/api/messages` by default)
 
-...no wait, actually three things - two in addition of the one I just mentioned:
+...no wait, actually three things - two in addition to the one I just mentioned:
 
 * `MicrosoftAppId`
 * `MicrosoftAppPassword`
