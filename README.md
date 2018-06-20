@@ -27,11 +27,20 @@ and quacks like a duck... you get the point.
 
 Moreover, this sample includes the notorious authentication bit in Teams apps. Namely, the sample
 provides the code required to authenticate using the
-[Microsoft Graph](https://developer.microsoft.com/en-us/graph).
+[Microsoft Graph](https://developer.microsoft.com/en-us/graph) **within Teams**.
 
 If it's 2019 and you're reading this, then it's fair to assume the information here is no longer of
 any use as Bot Framework v4 should be the official version (no longer in preview) now. Thanks for
 visiting anyways.
+
+**Contents**
+
+* [How to set up and install the sample in Teams](#so-how-do-i)
+* [Authentication using Microsoft Graph/Azure AD](#authentication)
+* [Troubleshooting](#troubleshooting)
+* [Links for proper documentation](#further-reading)
+* May contain traces of nuts.
+
 
 ## So, how do I... ##
 
@@ -104,7 +113,9 @@ Next you can choose whether to install the app for the team only or to install f
 [static tabs](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/tabs/tabs-static),
 which our sample does) and/or for the team.
 
-#### 1. Install for the team only ####
+#### Option 1. Install for the team only ####
+
+**If you want to test the authentication bit as well, skip right to the option 2.**
 
 1. In Teams, click the three dots next to the team, where you want to install the app, and select
    **Manage team**:
@@ -127,7 +138,7 @@ which our sample does) and/or for the team.
    
         ![Second pop-up window](/doc/set-up-bot-2.png)
 
-#### 2. Install for personal use/the team ####
+#### Option 2. Install for personal use/the team ####
 
 1. In teams, click the three dots on the left-most pane (typically on purple background under the
    **Files** icon) and select **More apps**
