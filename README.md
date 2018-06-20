@@ -178,17 +178,6 @@ Given that you didn't mess with the actual code, there's one thing remember:
     * Make sure this is set in the settings of the **Bot Channels Registration** resource in the
       **Azure Portal** and that it ends with the appropriate path (`/api/messages` by default)
 
-...no wait, actually three things - two in addition to the one I just mentioned:
-
-* `MicrosoftAppId`
-* `MicrosoftAppPassword`
-
-Make sure these are set in:
-
-* the [`appsettings.json` file](/TeamsAppSample.NETCore/appsettings.json) file
-* the **Application Settings** of the bot **App Service** (again in Azure Portal)
-* the Bot Framework Emulator, when using it
-
 By the way: You can define a custom messaging endpoint in the code like this
 (see [`Startup.cs`](/TeamsAppSample.NETCore/Startup.cs)):
 
@@ -200,6 +189,17 @@ app.UseBotFramework(bot =>
     bot.MessagesPath = "/cannotguessthis";
 });
 ```
+
+...no wait, actually three things - two in addition to the one I just mentioned:
+
+* `MicrosoftAppId`
+* `MicrosoftAppPassword`
+
+Make sure these are set in:
+
+* the [`appsettings.json` file](/TeamsAppSample.NETCore/appsettings.json) file
+* the **Application Settings** of the bot **App Service** (again in Azure Portal)
+* the Bot Framework Emulator, when using it
 
 No! Wait! One more thing. There are four things to remember. Did you remember to enable the
 **Channels** (such as Microsoft Teams, Slack etc.) under **BOT MANAGEMENT** of the **Bot Channels
