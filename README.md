@@ -62,7 +62,7 @@ By the way: You can define a custom messaging endpoint in the code like this
 app.UseBotFramework(bot =>
 {
     bot.BasePath = "/api";
-    bot.MessagesPath = "/cannotguessthis";
+    bot.MessagesPath = "/tidings";
 });
 ```
 
