@@ -39,7 +39,7 @@ visiting anyways.
 * [Authentication using Microsoft Graph/Azure AD](#authentication)
 * [Troubleshooting](#troubleshooting)
 * [Links for proper documentation](#further-reading)
-* May contain traces of nuts.
+* May contain traces of nuts
 
 
 ## So, how do I... ##
