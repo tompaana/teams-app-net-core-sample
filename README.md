@@ -124,6 +124,7 @@ which our sample does) and/or for the team.
     ![Install app pop-up window](/doc/install-app-pop-up-window.png)
 5. Follow the instructions to set up the bot, if you so desire
 6. You can now find the app in the app menu:
+
     ![Sample app menu item](/doc/sample-app-menu-item.png)
 7. Click the app in the menu to view the personal tabs, which in the case of the sample look like this:
     ![Sample app tabs](/doc/sample-app-tabs.png)
