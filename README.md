@@ -26,7 +26,7 @@ way, it reasonable to expect everything to just work. If it looks like a duck, s
 and quacks like a duck... you get the point.
 
 Moreover, this sample includes the notorious authentication bit in Teams apps. Namely, the sample
-provides the code required to authenticate against the
+provides the code required to authenticate using the
 [Microsoft Graph](https://developer.microsoft.com/en-us/graph).
 
 If it's 2019 and you're reading this, then it's fair to assume the information here is no longer of
