@@ -122,7 +122,7 @@ which our sample does) and/or for the team.
    select **Open**
 4. Select the desired team to install the app for in the pop-up window and click **Install**
     ![Install app pop-up window](/doc/install-app-pop-up-window.png)
-5. Follow the instructions to set up the bot if you so desire
+5. Follow the instructions to set up the bot, if you so desire
 6. You can now find the app in the app menu:
     ![Sample app menu item](/doc/sample-app-menu-item.png)
 7. Click the app in the menu to view the personal tabs, which in the case of the sample look like this:
