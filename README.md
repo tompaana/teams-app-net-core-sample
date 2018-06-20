@@ -54,6 +54,18 @@ Here goes:
        (Bot Channels Registration/Settings)?
      * Did you remember to create and add the credentials (`MicrosoftAppId` and `MicrosoftAppPassword`)?
 
+By the way: You can define a custom messaging endpoint in the code like this
+(see [`Startup.cs`](/TeamsAppSample.NETCore/Startup.cs)):
+
+```cs
+// app is of type IApplicationBuilder
+app.UseBotFramework(bot =>
+{
+    bot.BasePath = "/api";
+    bot.MessagesPath = "/cannotguessthis";
+});
+```
+
 Finally add the credentials (`MicrosoftAppId` and `MicrosoftAppPassword`) to the
 [`appsettings.json` file](/TeamsAppSample.NETCore/appsettings.json) and republish the bot - now all
 you need to do to republish is to right-click the app project in the **Solution Explorer** in
@@ -177,18 +189,6 @@ Given that you didn't mess with the actual code, there's one thing remember:
 * Endpoint URL
     * Make sure this is set in the settings of the **Bot Channels Registration** resource in the
       **Azure Portal** and that it ends with the appropriate path (`/api/messages` by default)
-
-By the way: You can define a custom messaging endpoint in the code like this
-(see [`Startup.cs`](/TeamsAppSample.NETCore/Startup.cs)):
-
-```cs
-// app is of type IApplicationBuilder
-app.UseBotFramework(bot =>
-{
-    bot.BasePath = "/api";
-    bot.MessagesPath = "/cannotguessthis";
-});
-```
 
 ...no wait, actually three things - two in addition to the one I just mentioned:
 
