@@ -205,6 +205,12 @@ No! Wait! One more thing. There are four things to remember. Did you remember to
 **Channels** (such as Microsoft Teams, Slack etc.) under **BOT MANAGEMENT** of the **Bot Channels
 Registration** resource in - you guessed it! - **Azure Portal**? You did? Good.
 
+Let's move o...SH*T! Five things. Five things to remember. If your bot's not co-operative in Teams,
+then check the value of the `botId` property in `bots` array - that needs to match your
+`MicrosoftAppId`. That's how the Teams know to which bot to pass the messages to.
+
+That's it!
+
 ### No content shown on tabs ###
 
 Microsoft Teams app manifest contains a property (array) named `validDomains`, which lists the
