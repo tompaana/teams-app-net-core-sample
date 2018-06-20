@@ -147,8 +147,8 @@ Teams (the authentication tab shown above). The code for the authentication is s
 from
 [this Microsoft Teams sample](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/tree/tutorial_11_authentication_graph),
 but modified into
-[Razor pages](https://docs.microsoft.com/en-us/aspnet/core/mvc/razor-pages/?view=aspnetcore-2.1&tabs=visual-studio)
-- build blocks provided by ASP.NET Core.
+[Razor pages](https://docs.microsoft.com/en-us/aspnet/core/mvc/razor-pages/?view=aspnetcore-2.1&tabs=visual-studio) -
+webpage building blocks provided by **ASP.NET Core**.
 
 You can find the authentication specific code in the
 [/TeamsAppSample.NETCore/Pages/Auth](/TeamsAppSample.NETCore/Pages/Auth) folder.
@@ -165,7 +165,76 @@ To test the authentication flow do the following:
 3. Republish the app
 4. Try it out!
 
+## Troubleshooting ##
+
+Or as I like to call it: Things that make you cuss and bang your head on hard solid vertical planes.
+
+### Why doesn't my bot talk to me? ###
+
+Given that you didn't mess with the actual code, there one thing:
+* Endpoint URL
+    * Make sure this is set in the settings of the **Bot Channels Registration** resource in the
+      **Azure Portal** and that it ends with the appropriate path (`/api/messages` by default)
+
+...no wait, actually three things - two in addition of the one I just mentioned:
+
+* `MicrosoftAppId`
+* `MicrosoftAppPassword`
+
+Make sure these are set in:
+    * the [`appsettings.json` file](/TeamsAppSample.NETCore/appsettings.json) file
+    * the **Application Settings** of the bot **App Service** (again in Azure Portal)
+    * the Bot Framework Emulator, when using it
+
+By the way: You can define a custom messaging endpoint in the code like this
+(see [`Startup.cs`](/TeamsAppSample.NETCore/Startup.cs)):
+
+```cs
+// app is of type IApplicationBuilder
+app.UseBotFramework(bot =>
+{
+    bot.BasePath = "/api";
+    bot.MessagesPath = "/cannotguessthis";
+});
+```
+
+
+
+### No content shown on tabs ###
+
+Microsoft Teams app manifest contains a property (array) named `validDomains`, which lists the
+domains where the app is allowed to load content from. Make sure you remember this, when creating
+your app. In this sample I've neglected all security and simply done this:
+
+```json
+  "validDomains": [
+    "*.azurewebsites.net"
+  ]
+```
+
+Read more: [Manifest schema: validDomains](https://docs.microsoft.com/en-us/microsoftteams/platform/resources/schema/manifest-schema#validdomains)
+
+### Web page 404 ###
+
+Well, now you must have messed with the code! But I really want to mention this: Razor pages use
+MVC. And why should you care? Because if you don't, bad things can happen, and by bad things I mean
+you'll get **404**. Check out [`Startup.cs`](/TeamsAppSample.NETCore/Startup.cs) - there are two
+spots there that must be defined in order for the pages to be accessible:
+
+In `ConfigureServices` method:
+
+```cs
+services.AddMvc();
+```
+
+In `Configure` method:
+
+```cs
+app.UseMvc();
+```
+
 ## Further reading ##
 
+* [The Microsoft Teams developer platform](https://docs.microsoft.com/en-us/microsoftteams/platform/overview)
 * [Create a bot with the Bot Builder SDK v4 for .NET](https://docs.microsoft.com/en-us/azure/bot-service/dotnet/bot-builder-dotnet-sdk-quickstart?view=azure-bot-service-4.0)
 * [Getting started building Microsoft Graph apps](https://developer.microsoft.com/en-us/graph/docs/concepts/get-started)
