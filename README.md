@@ -182,9 +182,10 @@ Given that you didn't mess with the actual code, there one thing:
 * `MicrosoftAppPassword`
 
 Make sure these are set in:
-    * the [`appsettings.json` file](/TeamsAppSample.NETCore/appsettings.json) file
-    * the **Application Settings** of the bot **App Service** (again in Azure Portal)
-    * the Bot Framework Emulator, when using it
+
+* the [`appsettings.json` file](/TeamsAppSample.NETCore/appsettings.json) file
+* the **Application Settings** of the bot **App Service** (again in Azure Portal)
+* the Bot Framework Emulator, when using it
 
 By the way: You can define a custom messaging endpoint in the code like this
 (see [`Startup.cs`](/TeamsAppSample.NETCore/Startup.cs)):
