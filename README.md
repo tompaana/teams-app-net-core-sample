@@ -137,9 +137,35 @@ which our sample does) and/or for the team.
 
     ![Sample app tabs](/doc/sample-app-tabs.png)
 
+### Authentication ###
 
+[Microsoft Graph](https://developer.microsoft.com/en-us/graph/docs/concepts/overview) provides an
+API to authenticate users via
+[Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-whatis)
+(Azure AD). This sample contains the necessary bits to execute the authentication process within
+Teams (the authentication tab shown above). The code for the authentication is shamelessly copied
+from
+[this Microsoft Teams sample](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/tree/tutorial_11_authentication_graph),
+but modified into
+[Razor pages](https://docs.microsoft.com/en-us/aspnet/core/mvc/razor-pages/?view=aspnetcore-2.1&tabs=visual-studio)
+- build blocks provided by ASP.NET Core.
 
-(WORK IN PROGRESS THIS IS! TEXT BELOW MIND YOU NOT.)
+You can find the authentication specific code in the
+[/TeamsAppSample.NETCore/Pages/Auth](/TeamsAppSample.NETCore/Pages/Auth) folder.
 
-* Getting started with Bot Framework v4: https://docs.microsoft.com/en-us/azure/bot-service/dotnet/bot-builder-dotnet-sdk-quickstart?view=azure-bot-service-4.0
-* Azure AD: https://docs.microsoft.com/en-us/azure/app-service/app-service-mobile-how-to-configure-active-directory-authentication
+To test the authentication flow do the following:
+
+1. Register a new application in the [Application Registration Portal](https://apps.dev.microsoft.com)
+    * Follow the instructions under the **Register the application** header [here](https://developer.microsoft.com/en-us/graph/docs/concepts/aspnetmvc), but
+        * Add redirect URL `https://<your Teams app base URL>/Auth/AuthFinishedRedirect` and
+        * ignore other instructions on the page
+2. Copy the application ID of the app you just registered into the
+   [`manifest.json`](/TeamsAppSample.NETCore/TeamsManifest/manifest.json) file as the value of the
+   `AuthClientId` property
+3. Republish the app
+4. Try it out!
+
+## Further reading ##
+
+* [Create a bot with the Bot Builder SDK v4 for .NET](https://docs.microsoft.com/en-us/azure/bot-service/dotnet/bot-builder-dotnet-sdk-quickstart?view=azure-bot-service-4.0)
+* [Getting started building Microsoft Graph apps](https://developer.microsoft.com/en-us/graph/docs/concepts/get-started)
