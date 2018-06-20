@@ -74,7 +74,7 @@ you created previously. Select **Channels** under **BOT MANAGEMENT** and click t
 
 Then package and upload the app manifest in Teams. Remember when I said (wrote) that a Teams app is
 nothing but a web app? Still true. That also means that your app doesn't live inside Teams, but
-rather extends its tentacles (endpoints) into the abyss of the Teams registry. For exact details see
+rather extends its tentacles (endpoints) into the abyss of the Teams registry. For the exact details see
 [this article](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/apps/apps-upload),
 **but** here's the quick guide:
 
@@ -173,7 +173,7 @@ Or as I like to call it: Things that make you cuss and bang your head on hard so
 
 ### Why doesn't my bot talk to me? ###
 
-Given that you didn't mess with the actual code, there one thing:
+Given that you didn't mess with the actual code, there's one thing remember:
 * Endpoint URL
     * Make sure this is set in the settings of the **Bot Channels Registration** resource in the
       **Azure Portal** and that it ends with the appropriate path (`/api/messages` by default)
@@ -201,7 +201,9 @@ app.UseBotFramework(bot =>
 });
 ```
 
-
+No! Wait! One more thing. There are four things to remember. Did you remember to enable the
+**Channels** (such as Microsoft Teams, Slack etc.) under **BOT MANAGEMENT** of the **Bot Channels
+Registration** resource in - you guessed it! - **Azure Portal**? You did? Good.
 
 ### No content shown on tabs ###
 
