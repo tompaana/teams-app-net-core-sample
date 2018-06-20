@@ -78,9 +78,9 @@ rather extends its tentacles (endpoints) into the abyss of the Teams registry. F
 [this article](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/apps/apps-upload),
 **but** here's the quick guide:
 
-1. Open the [`manifest.json`](/TeamsAppSample.NETCore/TeamsManifest/manifest.json) in text editor
-   and update the base of the URLs to match the URL of your published bot **and** add your bot ID
-   (`MicrosoftAppId`) as the value of `botId` within `bots` array
+1. Open the [`manifest.json`](/TeamsAppSample.NETCore/TeamsManifest/manifest.json) file in text
+   editor and update the base of the URLs to match the URL of your published bot **and** add your
+   bot ID (`MicrosoftAppId`) as the value of `botId` within `bots` array
    * Top tip: Use [App Studio for Microsoft Teams](https://docs.microsoft.com/en-us/microsoftteams/platform/get-started/get-started-app-studio)
      to create and manage manifest files (and to see what properties there are)
 2. Package the content in the [`TeamsManifest`](/TeamsAppSample.NETCore/TeamsManifest/) folder in a
