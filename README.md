@@ -86,15 +86,48 @@ rather extends its tentacles (endpoints) into the abyss of the Teams registry. F
 2. Package the content in the [`TeamsManifest`](/TeamsAppSample.NETCore/TeamsManifest/) folder in a
    `.zip` file so that all the files are in the root of the package (the name of the package is
    insignificant in the grand scheme of things)
-3. In Teams, click the three dots next to the channel, where you want to install the app, and select
+
+Next you can choose whether to install the app for the team only or to install for personal use
+(given that the app provides personal features such as
+[static tabs](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/tabs/tabs-static),
+which our sample does) and/or for the team.
+
+#### 1. Install for the team only ####
+
+1. In Teams, click the three dots next to the team, where you want to install the app, and select
    **Manage team**:
-    ![Channel settings](/doc/channel-settings.png?size=50)
-4. Navigate to the **Apps** tab and locate the **Upload a custom app** link in the bottom-right
+    ![Team settings](/doc/team-settings.png?size=50)
+2. Navigate to the **Apps** tab and locate the **Upload a custom app** link in the bottom-right
    corner and click it, CLICK IT!
-5. Browse to the location of your `.zip` package containing the manifest file and the icons and
+3. Browse to the location of your `.zip` package containing the manifest file and the icons and
    select **Open**
    * If there were no errors, you should now see your app in the list - looks something like this:
         ![Entry in apps list](/doc/entry-in-apps-list.png?size=50)
+4. You can set up the bot by simply calling it in channel conversation, but there is a guided way to
+   do it:
+   * Still in the manage apps view in team settings, click the app list item (shown in the image above)
+   * Click **Available** link in the pop-up window
+        ![First pop-up window](/doc/set-up-bot-1.png)
+   * In the new pop-up window, select the desired channel and click the **Set up** button
+        ![Second pop-up window](/doc/set-up-bot-2.png)
+
+#### 2. Install for personal use/the team ####
+
+1. In teams, click the three dots on the left-most pane (typically on purple background under the
+   **Files** icon) and select **More apps**
+    ![More apps menu item](/doc/more-apps-menu-item.png)
+2. Select **Upload a custom app** in the menu on the left
+    ![Store menu](/doc/store-upload-custom-app.png)
+3. Browse to the location of your `.zip` package containing the manifest file and the icons and
+   select **Open**
+4. Select the desired team to install the app for in the pop-up window and click **Install**
+    ![Install app pop-up window](/doc/install-app-pop-up-window.png)
+5. Follow the instructions to set up the bot if you so desire
+6. You can now find the app in the app menu:
+    ![Sample app menu item](/doc/sample-app-menu-item.png)
+7. Click the app in the menu to view the personal tabs, which in the case of the sample look like this:
+    ![Sample app tabs](/doc/sample-app-tabs.png)
+
 
 
 (WORK IN PROGRESS THIS IS! TEXT BELOW MIND YOU NOT.)
