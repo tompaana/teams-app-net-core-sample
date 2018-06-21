@@ -47,10 +47,12 @@ visiting anyways.
 ## So, how do I... ##
 
 Before getting into the Teams specific stuff, let's first deploy the app (BOT!) and make sure it
-works. Now, <font size=9>[you may ask yourself "how do I work this?"](https://en.wikipedia.org/wiki/Once_in_a_Lifetime_(Talking_Heads_song)#Lyrics)</font> and you might be asking yourself "what does the bot have to do with any of this?", but, as
-mentioned earlier, Teams apps are partially based on the building blocks of the bot framework and
-this sample comes with a bot. So just go with it, ok? And when we deploy the bot, we are, in fact,
-deploying the whole Teams app itself.
+works. Now,
+<a style="font-size: 6pt" href="https://en.wikipedia.org/wiki/Once_in_a_Lifetime_(Talking_Heads_song)#Lyrics">you may ask yourself "how do I work this?" and</a>
+you may ask yourself "what does the bot have to do with any of this?", but, as mentioned earlier,
+Teams apps are partially based on the building blocks of the bot framework and this sample comes
+with a bot. So just go with it, ok? And when we deploy the bot, we are, in fact, deploying the whole
+Teams app itself.
 
 Note that the steps described here are for **Visual Studio**. In case you're using some other IDE,
 most of the content still applies, but you may have to consult a web search engine. The other thing
