@@ -40,7 +40,7 @@ visiting anyways.
 * [How to set up and install the sample in Teams](#so-how-do-i)
 * [Authentication using Microsoft Graph/Azure AD](#authentication)
 * [Troubleshooting](#troubleshooting)
-* [Links for proper documentation](#further-reading)
+* [Links to proper documentation](#further-reading)
 * May contain traces of nuts
 
 
@@ -54,10 +54,11 @@ Teams apps are partially based on the building blocks of the bot framework and t
 with a bot. So just go with it, ok? And when we deploy the bot, we are, in fact, deploying the whole
 Teams app itself.
 
-Note that the steps described here are for **Visual Studio**. In case you're using some other IDE,
-most of the content still applies, but you may have to consult a web search engine. The other thing
-here is that the deployment steps are for **Azure**. The bot app can be hosted practically anywhere,
-but then again you must look for the instructions elsewhere. Isn't life full of choices?
+Note that the steps described here are for
+[**Visual Studio**](https://visualstudio.microsoft.com/downloads/). In case you're using some other
+IDE, most of the content still applies, but you may have to consult a web search engine. The other
+thing here is that the deployment steps are for **Azure**. The bot app can be hosted practically
+anywhere, but then again you must look for the instructions elsewhere. Isn't life full of choices?
 
 If you don't have an Azure subscription yet, do not worry - you can get one for FREE here:
 [Create your Azure free account today](https://azure.microsoft.com/en-us/free/). Yeyyaah!
