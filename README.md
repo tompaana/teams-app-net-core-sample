@@ -8,7 +8,7 @@ utilize tabs (web content in `iframe`), connectors to allow rich notifications a
 [more](https://developer.microsoft.com/en-us/microsoft-teams/scenarios). But that doesn't change the
 fact that a Teams app is simply a web app.
 
-### Microsoft Bot Framework v4 supports .NET Core ###
+#### Microsoft Bot Framework v4 supports .NET Core ####
 
 The short-lived purpose of this sample is to serve as a quick guide on how to implement a Teams app
 using [Bot Framework v4](https://github.com/Microsoft/botbuilder-dotnet) - which as of writing this
@@ -52,13 +52,13 @@ mentioned earlier, Teams apps are partially based on the building blocks of the 
 this sample comes with a bot. So just go with it, ok? And when we deploy the bot, we are, in fact,
 deploying the whole Teams app itself.
 
-Note that the steps described here are for Visual Studio. In case you're using some other IDE, most
-of the content still applies, but you may have to consult a web search engine. The other thing here
-is that the deployment steps are for Azure. The bot app can be hosted practically anywhere, but then
-again you must look for the instructions elsewhere. Isn't life full of choices?
+Note that the steps described here are for **Visual Studio**. In case you're using some other IDE,
+most of the content still applies, but you may have to consult a web search engine. The other thing
+here is that the deployment steps are for **Azure**. The bot app can be hosted practically anywhere,
+but then again you must look for the instructions elsewhere. Isn't life full of choices?
 
 If you don't have an Azure subscription yet, do not worry - you can get one for FREE here:
-[Create your Azure free account today](https://azure.microsoft.com/en-us/free/) Yeyaah!
+[Create your Azure free account today](https://azure.microsoft.com/en-us/free/). Yeyaah!
 
 Here goes:
 
