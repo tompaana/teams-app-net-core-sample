@@ -65,7 +65,8 @@ If you don't have an Azure subscription yet, do not worry - you can get one for 
 
 Here goes:
 
-1. Open the solution (`TeamsAppSample.NETCore.sln`) in Visual Studio/your IDE
+1. Open the solution (`TeamsAppSample.NETCore.sln`) in Visual Studio/your IDE and make sure it
+   compiles without any errors (or warnings)
 2. Follow the steps in this article carefully:
    [Deploy your bot to Azure](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-howto-deploy-azure?view=azure-bot-service-4.0)
    * Top tip: Create a new [Azure resource group](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview#resource-groups)
@@ -91,8 +92,8 @@ app.UseBotFramework(bot =>
 Finally add the credentials (`MicrosoftAppId` and `MicrosoftAppPassword`) to the
 [`appsettings.json` file](/TeamsAppSample.NETCore/appsettings.json) and republish the bot - now all
 you need to do to republish is to right-click the app project in the **Solution Explorer** in
-Visual Studio, select **Publish...** and click the **Pubish** button on the tab (named in the sample
-"TeamsAppSample.NETCore").
+Visual Studio, select **Publish...** and click the **Publish** button on the tab (named in the
+sample "TeamsAppSample.NETCore").
 
 Well, that was quick and easy (I hope). Next, why not download the
 [Bot Framework Emulator](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-debug-emulator?view=azure-bot-service-3.0)
