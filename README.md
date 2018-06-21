@@ -47,7 +47,7 @@ visiting anyways.
 ## So, how do I... ##
 
 Before getting into the Teams specific stuff, let's first deploy the app (BOT!) and make sure it
-works. Now, you might be asking yourself "what does the bot have to do with any of this?", but, as
+works. Now, <font size=9>[you may ask yourself "how do I work this?"](https://en.wikipedia.org/wiki/Once_in_a_Lifetime_(Talking_Heads_song)#Lyrics)</font> and you might be asking yourself "what does the bot have to do with any of this?", but, as
 mentioned earlier, Teams apps are partially based on the building blocks of the bot framework and
 this sample comes with a bot. So just go with it, ok? And when we deploy the bot, we are, in fact,
 deploying the whole Teams app itself.
