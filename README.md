@@ -16,7 +16,7 @@ using [Bot Framework v4](https://github.com/Microsoft/botbuilder-dotnet) - which
 is still in preview - instead of the current v3.x. A reason one might have to target the preview
 version is the fact that while **v3.x is based on .NET Framework 4.x**, the new **v4 targets .NET
 Core**. Furthermore, the reason one might care is based on the platform their running their
-software; **.NET Core is multi-platform** including Linux support. To learn more, visit
+software on; **.NET Core is multi-platform** including Linux support. To learn more, visit
 [docs.microsoft.com](https://docs.microsoft.com/en-us/dotnet/standard/choosing-core-framework-server).
 
 Is there any reason .NET Core/Bot Framework v4 combo wouldn't work as a basis for a Teams app? Not
