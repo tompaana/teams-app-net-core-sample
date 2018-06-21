@@ -240,7 +240,7 @@ That's it!
 
 Microsoft Teams app manifest contains a property (array) named `validDomains`, which lists the
 domains where the app is allowed to load content from. Make sure you remember this, when creating
-your app. In this sample I've neglected all security and simply done this:
+your app. In this sample I've **NEGLECTED ALL SECURITY** and simply done this:
 
 ```json
   "validDomains": [
