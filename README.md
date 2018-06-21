@@ -60,7 +60,7 @@ here is that the deployment steps are for **Azure**. The bot app can be hosted p
 but then again you must look for the instructions elsewhere. Isn't life full of choices?
 
 If you don't have an Azure subscription yet, do not worry - you can get one for FREE here:
-[Create your Azure free account today](https://azure.microsoft.com/en-us/free/). Yeyaah!
+[Create your Azure free account today](https://azure.microsoft.com/en-us/free/). Yeyyaah!
 
 Here goes:
 
