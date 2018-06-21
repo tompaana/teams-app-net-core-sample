@@ -24,7 +24,7 @@ software on; **.NET Core is multi-platform** including Linux support. To learn m
 Is there any reason .NET Core/Bot Framework v4 combo wouldn't work as a basis for a Teams app? Not
 that I can tell - please refer to the technical outline above. As long as the web app looks the same
 outside providing the appropriate inputs and outputs and knows how to handle the messages the same
-way, it reasonable to expect everything to just work. If it looks like a duck, swims like a duck,
+way, it is reasonable to expect everything to just work. If it looks like a duck, swims like a duck,
 and quacks like a duck... you get the point.
 
 Moreover, this sample includes the <strike>notorious</strike> somewhat tricky authentication bit in
