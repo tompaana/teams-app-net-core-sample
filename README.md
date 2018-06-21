@@ -8,16 +8,18 @@ utilize tabs (web content in `iframe`), connectors to allow rich notifications a
 [more](https://developer.microsoft.com/en-us/microsoft-teams/scenarios). But that doesn't change the
 fact that a Teams app is simply a web app.
 
-![Author's highly technical illustration of a web app.](/doc/webapp.png?size=50)<br />
-*Author's highly technical illustration of a web app.*
+### Microsoft Bot Framework v4 supports .NET Core ###
 
 The short-lived purpose of this sample is to serve as a quick guide on how to implement a Teams app
 using [Bot Framework v4](https://github.com/Microsoft/botbuilder-dotnet) - which as of writing this
-is still in preview - instead of the current v3.x. A reason one might have to target the preview
+is still **in preview** - instead of the current v3.x. A reason one might have to target the preview
 version is the fact that while **v3.x is based on .NET Framework 4.x**, the new **v4 targets .NET
 Core**. Furthermore, the reason one might care is based on the platform their running their
 software on; **.NET Core is multi-platform** including Linux support. To learn more, visit
 [docs.microsoft.com](https://docs.microsoft.com/en-us/dotnet/standard/choosing-core-framework-server).
+
+![Author's highly technical illustration of a web app.](/doc/webapp.png?size=50)<br />
+*Author's highly technical illustration of a web app.*
 
 Is there any reason .NET Core/Bot Framework v4 combo wouldn't work as a basis for a Teams app? Not
 that I can tell - please refer to the technical outline above. As long as the web app looks the same
@@ -25,15 +27,15 @@ outside providing the appropriate inputs and outputs and knows how to handle the
 way, it reasonable to expect everything to just work. If it looks like a duck, swims like a duck,
 and quacks like a duck... you get the point.
 
-Moreover, this sample includes the notorious authentication bit in Teams apps. Namely, the sample
-provides the code required to authenticate using the
+Moreover, this sample includes the <strike>notorious</strike> somewhat tricky authentication bit in
+Teams apps. Namely, the sample provides the code required to authenticate using the
 [Microsoft Graph](https://developer.microsoft.com/en-us/graph) **within Teams**.
 
 If it's 2019 and you're reading this, then it's fair to assume the information here is no longer of
 any use as Bot Framework v4 should be the official version (no longer in preview) now. Thanks for
 visiting anyways.
 
-**Contents**
+#### Contents ####
 
 * [How to set up and install the sample in Teams](#so-how-do-i)
 * [Authentication using Microsoft Graph/Azure AD](#authentication)
@@ -45,10 +47,18 @@ visiting anyways.
 ## So, how do I... ##
 
 Before getting into the Teams specific stuff, let's first deploy the app (BOT!) and make sure it
-works. Note that the steps described here are for Visual Studio. In case you're using some other
-IDE, most of the content still applies, but you may have to consult a web search engine. The other
-thing here is that the deployment steps are for Azure. The bot app can be hosted practically
-anywhere, but then again you must look for the instructions elsewhere. Isn't life full of choices?
+works. Now, you might be asking yourself "what does the bot have to do with any of this?", but, as
+mentioned earlier, Teams apps are partially based on the building blocks of the bot framework and
+this sample comes with a bot. So just go with it, ok? And when we deploy the bot, we are, in fact,
+deploying the whole Teams app itself.
+
+Note that the steps described here are for Visual Studio. In case you're using some other IDE, most
+of the content still applies, but you may have to consult a web search engine. The other thing here
+is that the deployment steps are for Azure. The bot app can be hosted practically anywhere, but then
+again you must look for the instructions elsewhere. Isn't life full of choices?
+
+If you don't have an Azure subscription yet, do not worry - you can get one for FREE here:
+[Create your Azure free account today](https://azure.microsoft.com/en-us/free/) Yeyaah!
 
 Here goes:
 
