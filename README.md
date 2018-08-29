@@ -204,6 +204,8 @@ To test the authentication flow do the following:
 3. Republish the app
 4. Try it out!
 
+Now don't feel bad, if the whole authentication process feels weird - it's not that straightforward. I encourage you to check out the blog post, [Why is authenticating a bot so hard?](http://pedro.digitaldias.com/?p=478), written by Pedro Dias.
+
 ## Troubleshooting ##
 
 Or as I like to call it: Things that make you cuss and bang your head on hard solid vertical planes.
@@ -274,3 +276,4 @@ app.UseMvc();
 * [The Microsoft Teams developer platform](https://docs.microsoft.com/en-us/microsoftteams/platform/overview)
 * [Create a bot with the Bot Builder SDK v4 for .NET](https://docs.microsoft.com/en-us/azure/bot-service/dotnet/bot-builder-dotnet-sdk-quickstart?view=azure-bot-service-4.0)
 * [Getting started building Microsoft Graph apps](https://developer.microsoft.com/en-us/graph/docs/concepts/get-started)
+* [Why is authenticating a bot so hard?](http://pedro.digitaldias.com/?p=478)
